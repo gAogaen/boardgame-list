@@ -148,7 +148,7 @@
   </script>
 </head>
 <body>
-  <h1>遊んだことのあるボードゲーム一覧</h1>
+  <h1>ボードゲーム一覧</h1>
 
   <div class="controls">
     <input type="number" id="playerCount" placeholder="プレイ人数で絞り込み" />
@@ -160,27 +160,121 @@
 
   <div id="game-container">
     <div class="game" data-min-players="2" data-max-players="10">
-      <img src="images/nimmt.jpg" alt="ニムト">
-      <h2>ニムト <span class="players">👥 2〜10人（推奨6人）</span></h2>
+      <img src="images/nimmt.jpg" alt="ニムト" />
+      <h2>ニムト <span class="players">👥 2〜10人 / 推奨：6人</span></h2>
       <p>数字カードを順番に出していき、6枚目を出してしまった人が列のカードを引き取ります。牛の頭が少ない方が勝ち！</p>
       <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
       <div class="details">
-        <p>各プレイヤーに手札を配り、同時にカードを出します。数字順に処理され、列の6枚目を置いたプレイヤーは列を回収し、マイナス点を受けます。ゲーム終了時に最も失点が少ない人が勝ちます。</p>
+        <p>各プレイヤーに手札が配られ、カードを一斉に伏せて出し、数字順に処理します。カードは4列に並び、5枚目の次のカードを出した人が列を引き取ります。カードには"牛の頭"があり、得点としてマイナスになります。ゲーム終了時に最もマイナス点が少ない人が勝ちです。</p>
       </div>
     </div>
-
-    <div class="game" data-min-players="1" data-max-players="5">
-      <img src="images/yahtzee.jpg" alt="ヤッツィー">
-      <h2>ヤッツィー <span class="players">👥 1〜5人（推奨2人）</span></h2>
-      <p>5つのダイスを振って、さまざまな役を作って得点を競うゲーム。</p>
+    <div class="game" data-min-players="1" data-max-players="4">
+      <img src="images/yahtzee.jpg" alt="ヤッツィー" />
+      <h2>ヤッツィー <span class="players">👥 1〜4人 / 推奨：2人</span></h2>
+      <p>サイコロを振って役を作るダイスゲーム。ポーカーのような役を狙って得点を稼ぎます。</p>
       <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
       <div class="details">
-        <p>ダイスを最大3回まで振って、役（フルハウス・ストレートなど）に当てはめて得点を記録。すべての項目を埋めた後に合計点で勝敗が決まります。</p>
+        <p>5個のダイスを最大3回まで振り直し、13種類の役を埋めていく。各役は1回しか使えない。全ての役を埋めたら得点を合計し、高得点を目指す。</p>
+      </div>
+    </div>
+    <div class="game" data-min-players="2" data-max-players="4">
+      <img src="images/cantstop.jpg" alt="キャントストップ" />
+      <h2>キャントストップ <span class="players">👥 2〜4人 / 推奨：3人</span></h2>
+      <p>サイコロを振って数字のコマを上へ上へと進める。やめ時が重要なチキンレースゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>4つのダイスを2組に分けて、対応する数字の列にマーカーを進めていく。3列中1列でも頂点に到達すれば勝利に近づくが、バーストするとそのターンの進捗が全て失われる。</p>
+      </div>
+    </div>
+    <div class="game" data-min-players="3" data-max-players="6">
+      <img src="images/skull.jpg" alt="スカル" />
+      <h2>スカル <span class="players">👥 3〜6人 / 推奨：4人</span></h2>
+      <p>ブラフと読み合いが楽しいカードゲーム。バラかドクロか、めくるカードにドキドキ！</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>各プレイヤーは裏向きのカードを順に出し、誰かが挑戦すると表にめくっていく。すべてのバラをめくれば成功、ドクロをめくると失敗。一度成功すれば1点、2点で勝利。</p>
       </div>
     </div>
 
-    <!-- 以下略。同様にすべてのゲームを記述してください -->
-    <!-- キャントストップ, スカル, お邪魔者, ラブレター, キング・オブ・トーキョー, スプレンダー, ポーションエクスプロージョン, カタン, 7 Wonders, コードネーム -->
+    <div class="game" data-min-players="3" data-max-players="10">
+      <img src="images/saboteur.jpg" alt="お邪魔者" />
+      <h2>お邪魔者 <span class="players">👥 3〜10人 / 推奨：7人</span></h2>
+      <p>鉱山を掘り進む中で、正体を隠したお邪魔者がチームの妨害をする正体隠匿系ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>プレイヤーは金鉱堀りチームとお邪魔者チームに分かれ、手札の道カードを使って鉱山を進めたり妨害したりします。誰が味方かを見極めるのがカギ。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="2" data-max-players="6">
+      <img src="images/loveletter.jpg" alt="ラブレター" />
+      <h2>ラブレター <span class="players">👥 2〜6人 / 推奨：4人</span></h2>
+      <p>たった16枚のカードで読み合う、短時間で何度も楽しめる推理系ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>1枚の手札から1枚引いてどちらかを出すだけ。相手のカードを推理して脱落させ、最後まで残れば勝ち。手軽だけど奥が深い！</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="2" data-max-players="6">
+      <img src="images/kingoftokyo.jpg" alt="キング・オブ・トーキョー" />
+      <h2>キング・オブ・トーキョー <span class="players">👥 2〜6人 / 推奨：4人</span></h2>
+      <p>怪獣になってサイコロを振り、東京の覇者を目指すド派手なバトルゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>プレイヤーはモンスターを操作して東京を制圧。エネルギーでカードを買ったり、体力管理をしながら相手を殴り合う。最後の1人になるか20点先取で勝利。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="2" data-max-players="4">
+      <img src="images/splendor.jpg" alt="スプレンダー" />
+      <h2>スプレンダー <span class="players">👥 2〜4人 / 推奨：3人</span></h2>
+      <p>宝石を集めて発展カードを購入し、貴族に認められて得点を稼ぐエンジン構築ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>手番では宝石トークンを取るか、カードを購入または予約。購入したカードは次以降のコスト軽減になる。15点先取で勝利。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="2" data-max-players="4">
+      <img src="images/potionexplosion.jpg" alt="ポーションエクスプロージョン" />
+      <h2>ポーションエクスプロージョン <span class="players">👥 2〜4人 / 推奨：3人</span></h2>
+      <p>ビー玉を取り出して連鎖させ、ポーションを完成させて得点を稼ぐパズル系ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>同じ色のビー玉を連続で取得できるとコンボ発生。完成させたポーションは効果として使うこともでき、戦略の幅が広がる。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="3" data-max-players="4">
+      <img src="images/catan.jpg" alt="カタン" />
+      <h2>カタン <span class="players">👥 3〜4人 / 推奨：4人</span></h2>
+      <p>資源を集めて交渉・建設していく王道の陣取り系ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>ダイスで資源を得て、それを使って道や家を建てる。交渉で資源を交換しながら、10点先取を目指す。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="3" data-max-players="7">
+      <img src="images/7wonders.jpg" alt="7 Wonders" />
+      <h2>7 Wonders <span class="players">👥 3〜7人 / 推奨：5人</span></h2>
+      <p>ドラフトと文明発展が楽しい名作カードゲーム。短時間で奥深い戦略が楽しめます。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>手札から1枚を選んで残りを隣に回すドラフト形式。3つの時代を通して、建物・軍事・科学・資源などをバランスよく発展させ、得点を競う。</p>
+      </div>
+    </div>
+
+    <div class="game" data-min-players="2" data-max-players="8">
+      <img src="images/codenames.jpg" alt="コードネーム" />
+      <h2>コードネーム <span class="players">👥 2〜8人 / 推奨：4人</span></h2>
+      <p>味方に正しい言葉を伝えるため、ヒントを出して当ててもらうチーム戦の言葉ゲーム。</p>
+      <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+      <div class="details">
+        <p>スパイマスターは複数の単語に共通するヒントを1語で出し、味方が正しいカードを選ぶ。間違えると相手に得点が入ることもあり、慎重な推理と大胆な決断が求められる。</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
