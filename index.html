@@ -61,8 +61,49 @@
 <body>
   <h1>遊んだことのあるボードゲーム一覧</h1>
 
-  <!-- 以下、各ゲーム（全12種） -->
-  <!-- ニムト、ヤッツィー、キャントストップ、スカルはすでに追加済み -->
+  <!-- ニムト -->
+  <div class="game">
+    <img src="https://boardgamegeek.com/image/1320804/6-nimmt" alt="ニムト" />
+    <h2>ニムト</h2>
+    <p>数字カードを順番に出していき、6枚目を出してしまった人が列のカードを引き取ります。牛の頭が少ない方が勝ち！</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>カードは1～104番まであり、各プレイヤーに10枚ずつ配ります。カードを1枚ずつ伏せて出し、数の小さい順に列に加えていきます。列が5枚ある状態で次のカードが出されると、そのカードを出した人がその列全てを引き取ります。カードには牛の頭マークがあり、これが失点になります。</p>
+    </div>
+  </div>
+
+  <!-- ヤッツィー -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/3EjN9nSPbsIoP4gNbcOY_g__itemrep/img/YIRkK2YijE8c6lIjcgYmbmY3oI4=/fit-in/246x300/filters:strip_icc()/pic866085.jpg" alt="ヤッツィー" />
+    <h2>ヤッツィー</h2>
+    <p>5個のダイスを振って役を揃えるゲーム。どの役を狙うかの判断が勝敗を分けます。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>各ターン、最大3回までダイスを振ることができ、役に応じて得点表に記録します。一度記入した枠には再び記録できません。全13種類の役を全て埋めるとゲーム終了で、合計得点が最も高い人が勝ちです。</p>
+    </div>
+  </div>
+
+  <!-- キャントストップ -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/HKn3oqLTQlSP3Q2TvxGrfA__itemrep/img/y8TzSU99UVa2OCHPZINApkkM2FY=/fit-in/246x300/filters:strip_icc()/pic1662764.jpg" alt="キャントストップ" />
+    <h2>キャントストップ</h2>
+    <p>ダイスで出た数字にコマを進め、リスクをとってさらに進むかどうかの判断を楽しむチキンレース系ゲーム。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>プレイヤーはサイコロ4個を2組に分けて、その合計値（2〜12）に対応する列にコマを置きます。最大3つの列まで進めることができ、いつでも手番を終了して進捗を確定できますが、出目が悪くて動かせなくなるとそのターンの進捗はすべて失われます。</p>
+    </div>
+  </div>
+
+  <!-- スカル -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/WrK-MTkJlgVjM4EYzj6J2w__itemrep/img/qnCvEM5pTj0PE2Zl3N84pdLFghE=/fit-in/246x300/filters:strip_icc()/pic2338835.jpg" alt="スカル" />
+    <h2>スカル</h2>
+    <p>自分の出したカードにスカルがあるかをブラフで隠しつつ、他プレイヤーを出し抜いていく心理戦。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>各プレイヤーはスカル1枚と花3枚を持ち、1枚ずつ伏せて出していきます。任意のタイミングでチャレンジ宣言が可能で、その際に何枚の花をめくるか宣言します。成功すれば得点、失敗すればカードを失います。2点先取で勝利。</p>
+    </div>
+  </div>
 
   <!-- お邪魔者 -->
   <div class="game">
@@ -138,6 +179,17 @@
     <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
     <div class="details">
       <p>各時代（3ラウンド）で7枚のカードをドラフトし、1枚選んで自分の前に建てたり、資源や能力として使用します。軍事、商業、文化、科学など多彩な得点源があり、自分の文明の特性や隣人の動きに合わせて柔軟に戦略を立てる必要があります。</p>
+    </div>
+  </div>
+
+  <!-- コードネーム -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/g4tJNZrB-LGfD85hy5aV7g__itemrep/img/f9oqy2Jq7iJWjzMmpTy_rDKt7Io=/fit-in/246x300/filters:strip_icc()/pic2895706.jpg" alt="コードネーム" />
+    <h2>コードネーム</h2>
+    <p>スパイマスターがヒントを出し、味方がそれをもとに言葉カードを当てる、チーム戦の連想ゲーム。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>25枚の言葉カードが5×5のマスに並びます。スパイマスターは自チームのカードを連想できる言葉でヒントを出し、チームメイトはそのヒントから複数のカードを当てます。相手チームや暗殺者のカードを当てると負けにつながるため、慎重な連想が求められます。</p>
     </div>
   </div>
 
