@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>遊んだことのあるボードゲーム一覧</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .game {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 800px;
+    }
+    .game img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .game h2 {
+      margin-top: 1rem;
+      color: #007bff;
+    }
+    .game p {
+      color: #555;
+    }
+    .details {
+      display: none;
+      margin-top: 1rem;
+      color: #444;
+    }
+    .toggle-btn {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      details.style.display = details.style.display === 'none' ? 'block' : 'none';
+      button.textContent = details.style.display === 'block' ? '− 詳細を閉じる' : '+ 詳細を見る';
+    }
+  </script>
+</head>
+<body>
+  <h1>遊んだことのあるボードゲーム一覧</h1>
+
+  <!-- 以下、各ゲーム（全12種） -->
+  <!-- ニムト、ヤッツィー、キャントストップ、スカルはすでに追加済み -->
+
+  <!-- お邪魔者 -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/fErfmuoX8NLUuePpX_M1cg__itemrep/img/BC3R0f3RbxbRRW60x9Er-kBCguk=/fit-in/246x300/filters:strip_icc()/pic2513794.jpg" alt="お邪魔者" />
+    <h2>お邪魔者</h2>
+    <p>金鉱掘りと妨害者に分かれて坑道を掘る。正体隠匿系のパーティーゲーム。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>プレイヤーは「金鉱掘り」または「お邪魔者」に分かれ、それぞれの目的でカードを配置します。通路カードでゴール（金塊）を目指す中、妨害や修理カードで対立します。正体は非公開で、ゴール到達か妨害成功で勝者が決まります。</p>
+    </div>
+  </div>
+
+  <!-- ラブレター -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/_7uSP5OiTqGC0WEO9UbJWw__itemrep/img/CvLCWgLDRk1qlcfBrvQkYxTUS0M=/fit-in/246x300/filters:strip_icc()/pic1401448.jpg" alt="ラブレター" />
+    <h2>ラブレター</h2>
+    <p>1枚のカードで駆け引き！短時間で濃密な読み合いが楽しめるカードゲーム。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>手札は常に1枚。山札から1枚引いて2枚から1枚を出します。カードの効果で相手を脱落させたり、自分を守ったりしながら、最後まで残るか、山札が尽きたときに数字の高いカードを持っていると勝利します。</p>
+    </div>
+  </div>
+
+  <!-- キング・オブ・トーキョー -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/ZrlM9ObON9dW2Exob-VduA__itemrep/img/07ZAmrKDL6FuE2Cl2zX4zBHv2yQ=/fit-in/246x300/filters:strip_icc()/pic1224604.jpg" alt="キング・オブ・トーキョー" />
+    <h2>キング・オブ・トーキョー</h2>
+    <p>モンスターになってトーキョーの覇権を争う。ダイスバトルとスキルカードの相性がカギ！</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>プレイヤーはモンスターとなり、ダイスで攻撃・回復・エネルギー・得点を出します。トーキョーを支配し続けると得点が加速しますが、集中攻撃を受けやすくなります。20点で勝利、または最後の1人になれば勝ちです。</p>
+    </div>
+  </div>
+
+  <!-- スプレンダー -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/PjJzyDbzI7y4eyhyGvIq6Q__itemrep/img/XFvJ2CyaAyKqxf6XUIatXkvTXYs=/fit-in/246x300/filters:strip_icc()/pic1904079.jpg" alt="スプレンダー" />
+    <h2>スプレンダー</h2>
+    <p>宝石トークンを使って発展カードを獲得し、点数を稼ぐエンジン構築系の名作。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>毎ターン、宝石トークンの獲得・カードの購入・予約のいずれかを行います。カードは購入すると宝石の恒久資源となり、より高コストのカードを買いやすくなります。一定の得点を超えると貴族カードが来訪。15点でゲーム終了へ。</p>
+    </div>
+  </div>
+
+  <!-- ポーションエクスプロージョン -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/D0-igYJmXtFrPBvPt1ChSA__itemrep/img/kEkGTe26WjsGnSHwEsjBjsUPNHg=/fit-in/246x300/filters:strip_icc()/pic2840025.jpg" alt="ポーションエクスプロージョン" />
+    <h2>ポーションエクスプロージョン</h2>
+    <p>ビー玉を取りながら連鎖を作ってポーションを完成させる、見た目も楽しいアクション系パズルゲーム。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>同じ色のビー玉がぶつかると連鎖して一気に取れる仕組み。取ったビー玉は自分のポーションに配置し、完成させると特殊能力として使用可能。完成数に応じて点数を得ていきます。早く多く完成させる戦略が重要。</p>
+    </div>
+  </div>
+
+  <!-- カタン -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/NQJ4HmevDKN4D-AeXWmRzg__itemrep/img/IdDJ0ubWuvBLF4Onxt6lDccr5Tk=/fit-in/246x300/filters:strip_icc()/pic2419375.jpg" alt="カタン" />
+    <h2>カタン</h2>
+    <p>資源を集めて開拓を進める定番ボードゲーム。交渉も勝利のカギ！</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>サイコロの出目により土地から資源が得られます。資源を使って道・家・都市を建設し、ポイントを獲得します。他プレイヤーとの交渉も重要で、10点に到達すると勝利。盗賊の存在や道の長さなども戦略に影響します。</p>
+    </div>
+  </div>
+
+  <!-- 7 Wonders -->
+  <div class="game">
+    <img src="https://cf.geekdo-images.com/yCRK-4FZpUuV0j4DC1AyZg__itemrep/img/kSX8XjJDj-SKqKfC1M6Or4oqz3Y=/fit-in/246x300/filters:strip_icc()/pic860217.jpg" alt="7 Wonders" />
+    <h2>7 Wonders</h2>
+    <p>カードをドラフトして自分の文明を発展させていく。戦争、科学、商業など多様な勝ち筋がある名作。</p>
+    <button class="toggle-btn" onclick="toggleDetails(this)">+ 詳細を見る</button>
+    <div class="details">
+      <p>各時代（3ラウンド）で7枚のカードをドラフトし、1枚選んで自分の前に建てたり、資源や能力として使用します。軍事、商業、文化、科学など多彩な得点源があり、自分の文明の特性や隣人の動きに合わせて柔軟に戦略を立てる必要があります。</p>
+    </div>
+  </div>
+
+</body>
+</html>
