@@ -24,11 +24,12 @@
       max-width: 800px;
     }
     .game img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      aspect-ratio: 16 / 9;  /* 高さを比率で自動調整（モダンなブラウザ対応） */
+      object-fit: cover;
       border-radius: 6px;
-      width: 480px;
-      height: 270px;
-      object-fit: cover; /* or contain / fill depending on your preference */
-      display: block;
     }
     .game h2 {
       margin-top: 1rem;
